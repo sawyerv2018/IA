@@ -1,0 +1,41 @@
+/* Custom app styles - using design system tokens */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations for interactive elements */
+.animate-hover-lift {
+  transition: transform 0.2s ease-out;
+}
+
+.animate-hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 2px solid hsl(var(--muted));
+  border-top: 2px solid hsl(var(--primary));
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Focus visible improvements */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  nav, footer, .chatbot {
+    display: none !important;
+  }
+}
